@@ -40,12 +40,12 @@ export function AlbumGrid({ albums, filter }: AlbumGridProps) {
                             className='vinyl-record'
                         />
                     </Link>
-                    <h3>
+                    <h2 className='album-grid-title'>
                         <Link to={'/albums/$albumId'} params={{ albumId: album.id }}>
                             {album.title}
                         </Link>
-                    </h3>
-                    <p>{album.artist}</p>
+                    </h2>
+                    <h3 className='album-grid-artist'>{album.artist}</h3>
                 </li>
             ))}
         </ul>

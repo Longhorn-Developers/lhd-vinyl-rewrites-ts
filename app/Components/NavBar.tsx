@@ -1,20 +1,12 @@
 import { Link } from '@tanstack/react-router';
+import { ComponentPropsWithoutRef, ComponentPropsWithRef, forwardRef } from 'react';
 
 export function NavBar() {
     return (
         <nav className='navbar'>
             <h1>
                 <Link to='/'>
-                    <TablerVinylIcon
-                        style={{
-                            width: '1.2em',
-                            height: '1.2em',
-                            verticalAlign: 'middle',
-                            marginRight: '0.5em',
-                            marginTop: '-0.2em',
-                            color: 'text',
-                        }}
-                    />
+                    <TablerVinylIcon className='vinyl-icon' />
                     Vinyl Rewrites
                 </Link>
             </h1>
@@ -30,9 +22,9 @@ export function NavBar() {
     );
 }
 
-export function TablerVinylIcon(props) {
+export const TablerVinylIcon = forwardRef<SVGSVGElement, ComponentPropsWithoutRef<'svg'>>((props, ref) => {
     return (
-        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' ref={ref} {...props}>
             {/* Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE */}
             <g fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2'>
                 <path d='M16 3.937A9 9 0 1 0 21 12'></path>
@@ -41,4 +33,4 @@ export function TablerVinylIcon(props) {
             </g>
         </svg>
     );
-}
+});

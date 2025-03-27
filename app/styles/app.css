@@ -28,7 +28,7 @@ body {
     background-color: rgba(28, 26, 27, 0.6);
 }
 
-a {
+.navbar a {
     transition: color 0.1s ease-in-out;
 }
 
@@ -36,6 +36,15 @@ a {
     font-size: 2rem;
     text-decoration: none;
     color: var(--text-color);
+}
+
+.navbar .vinyl-icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    margin-top: -0.2em;
+    color: text;
 }
 
 .navbar ul {
@@ -120,12 +129,24 @@ a {
     transform: translateX(20px);
 }
 
-.album-grid-item > h3 > a {
-    color: var(--text-color);
+.album-grid-title {
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
-.album-grid-item > p {
+.album-grid-title > a {
+    color: var(--text-color);
+    transition: color 0.1s ease-in-out;
+}
+
+.album-grid-title > a:hover {
+    color: white;
+}
+
+.album-grid-artist {
     color: var(--darkened-text-color);
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 /* Search Styles */
