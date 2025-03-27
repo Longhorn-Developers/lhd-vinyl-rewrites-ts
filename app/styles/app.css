@@ -15,10 +15,11 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* Navbar Styles */
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
@@ -41,7 +42,6 @@ a {
     list-style: none;
     display: flex;
     gap: 1rem;
-    /* justify-self: flex-end; */
 }
 
 .navbar ul a {
@@ -57,6 +57,7 @@ a {
     text-decoration: underline;
 }
 
+/* App Styles */
 .app {
     max-width: 64rem;
     padding-left: 4rem;
@@ -65,6 +66,7 @@ a {
     margin-right: auto;
 }
 
+/* Album Grid Styles */
 .album-grid {
     --image-size: 200px;
     display: grid;
@@ -75,7 +77,7 @@ a {
     padding-bottom: 4rem;
 }
 
-.album-grid li {
+.album-grid-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,19 +85,50 @@ a {
     gap: 1rem;
 }
 
-.album-grid > li > a > img {
-    width: 100%;
+.album-grid-item > a {
+    position: relative;
+    width: var(--image-size);
     height: var(--image-size);
+    cursor: pointer;
+    z-index: 1;
 }
 
-.album-grid > li > h3 > a {
+.album-grid-cover-link > img {
+    width: 100%;
+    height: var(--image-size);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.album-grid-item .album-grid-cover {
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+}
+
+.album-grid-cover-link:hover .album-grid-cover {
+    transform: translateX(-20px);
+}
+
+.album-grid-item .vinyl-record {
+    z-index: 1;
+}
+
+.album-grid-cover-link:hover .vinyl-record {
+    transform: translateX(20px);
+}
+
+.album-grid-item > h3 > a {
     color: var(--text-color);
 }
 
-.album-grid > li > p {
+.album-grid-item > p {
     color: var(--darkened-text-color);
 }
 
+/* Search Styles */
 .search-container {
     margin: 2rem 0;
     display: flex;
