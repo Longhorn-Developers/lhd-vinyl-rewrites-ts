@@ -17,6 +17,10 @@ export const Route = createRootRoute({
             {
                 title: 'Vinyl Rewrites',
             },
+            {
+                name: 'description',
+                content: 'A website to search for vinyl records and find details about them.',
+            },
         ],
         links: [
             {
@@ -51,7 +55,7 @@ function RootComponent() {
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     return (
-        <html>
+        <html lang='en'>
             <head>
                 <HeadContent />
             </head>
