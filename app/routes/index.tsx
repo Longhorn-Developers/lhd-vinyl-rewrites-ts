@@ -11,7 +11,7 @@ function Home() {
     const [filter, setFilter] = useState('');
 
     return (
-        <div>
+        <div className='home-page'>
             <div className='search-container'>
                 <div className='search-input-wrapper'>
                     <svg

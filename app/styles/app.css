@@ -9,6 +9,8 @@ body {
     --text-color: #deddd9;
     --darkened-text-color: #c2c0b9;
     --background-color: #1c1a1b;
+    --ut-burntorange: #ff7f0e;
+    --ut-burntorange-light: #f8971f;
     min-height: 100%;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -69,10 +71,14 @@ body {
 /* App Styles */
 .app {
     max-width: 64rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Home Page Styles */
+.home-page {
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 /* Album Grid Styles */
@@ -221,7 +227,7 @@ body {
 .album-detail-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem;
 }
 
 .album-detail-navigation {
@@ -322,4 +328,35 @@ body {
 .album-not-found {
     text-align: center;
     padding: 4rem 2rem;
+}
+
+/* About Page Styles */
+.about-page {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.about-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-page p {
+    font-size: 1rem;
+    text-indent: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.about-page p a {
+    color: var(--ut-burntorange);
+    text-decoration: underline;
+    transition: color 0.1s ease-in-out;
+}
+
+.about-page p a:hover {
+    color: var(--ut-burntorange-light);
 }
